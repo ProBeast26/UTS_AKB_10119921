@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/layout_profile"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textStyle="bold"
+                android:textColor="@color/black_text"
+                android:layout_marginBottom="20dp"
+                android:textSize="28dp"
+                />
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:cardCornerRadius="100dp"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/imgTourismHr"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s9"
+                    />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Fakih Syafalik"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black_text"
+                android:textSize="20dp"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10119921"
+                    android:textSize="14dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+6281292292026"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <View
+                android:layout_marginTop="@dimen/padding16"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:id="@+id/my_desc_profile"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="deralvin03"
+                android:textSize="14dp"
+                />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/follow_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Follow me on:"
+                    android:textColor="@color/black_text"
+                    android:textSize="14dp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/txt_instagram"
+                        android:layout_toRightOf="@id/follow_me"
+                        android:layout_width="@dimen/padding32"
+                        android:layout_height="@dimen/padding32"
+                        android:src="@drawable/instagram"
+                        android:layout_marginRight="8dp"
+                        />
+                    <ImageView
+                        android:id="@+id/txt_facebook"
+                        android:layout_toRightOf="@id/follow_me"
+                        android:layout_width="@dimen/padding32"
+                        android:layout_height="@dimen/padding32"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/facebook"
+                        />
+                    <ImageView
+                        android:id="@+id/txt_email"
+                        android:layout_toRightOf="@id/follow_me"
+                        android:layout_width="@dimen/padding32"
+                        android:layout_height="@dimen/padding32"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/email"
+                        />
+                    <ImageView
+                        android:id="@+id/txt_github"
+                        android:layout_toRightOf="@id/follow_me"
+                        android:layout_width="@dimen/padding32"
+                        android:layout_height="@dimen/padding32"
+                        android:src="@drawable/github"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find me in :"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/padding16"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black_text"
+                android:textSize="15dp"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:elevation="0dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="@dimen/padding16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_height="wrap_content">
+                    <fragment
+                        android:id="@+id/my_maps_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="54dp"
+                    android:id="@+id/to_my_loc"
+                    android:layout_marginRight="@dimen/padding16"
+                    android:layout_marginBottom="@dimen/padding16"
+                    android:layout_height="54dp"
+                    app:backgroundTint="@color/white"
+                    android:src="@drawable/navigation"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="App Version"
+                android:id="@+id/openversion"
+                android:textColor="@color/black_text"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/white"
+                />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <!-- TODO: Update blank fragment layout -->
+</FrameLayout>

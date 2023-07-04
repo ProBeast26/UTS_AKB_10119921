@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DailyActivity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/back_daily"
+                android:layout_marginLeft="@dimen/padding16"
+                android:layout_marginTop="@dimen/padding16"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/back_button"
+                android:textColor="@color/black_text"
+                android:clickable="true"
+                android:textSize="28dp"
+                android:layout_marginRight="@dimen/padding32"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="My Activites"
+                android:textColor="@color/black_text"
+                android:textSize="23dp"
+                android:textStyle="bold"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/back_daily"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/friendzy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friendzy"
+                android:textSize="20dp"
+
+                android:textStyle="bold"
+                android:textColor="@color/black_text"
+                android:layout_marginTop="@dimen/padding16"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/back_daily" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_friends"
+                android:layout_marginTop="@dimen/padding16"
+                android:layout_width="match_parent"
+                android:clipToPadding="false"
+                android:paddingLeft="6dp"
+                android:paddingRight="16dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/friendzy" />
+
+            <TextView
+                android:id="@+id/daily_activities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Activities"
+                android:textSize="20dp"
+
+                android:textStyle="bold"
+                android:textColor="@color/black_text"
+                android:layout_marginTop="@dimen/padding16"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/list_friends" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_banner_daily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="@dimen/padding16"
+                android:elevation="0dp"
+                app:cardElevation="0dp"
+                android:layout_marginLeft="@dimen/padding16"
+                android:layout_marginRight="@dimen/padding16"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/daily_activities">
+
+                <RelativeLayout
+
+                    android:paddingTop="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="@dimen/padding16"
+                    android:id="@+id/relative_daily"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue_ocean"
+                    app:layout_constraintTop_toBottomOf="@+id/daily_activities">
+
+                    <ImageView
+                        android:id="@+id/banner_activty"
+                        android:layout_width="180dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/my_activity" />
+                    <LinearLayout
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@id/banner_activty"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="My Daily Goals almost done"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="8 of 10 completed"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:layout_height="wrap_content"/>
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:layout_width="match_parent"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:layout_marginTop="5dp"
+                            app:indicatorColor="@color/white"
+                            app:trackCornerRadius="@dimen/padding16"
+                            android:id="@+id/progress_daily"
+                            android:layout_marginRight="@dimen/padding16"
+                            android:progress="80"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_daily"
+                android:layout_marginTop="@dimen/padding16"
+                android:layout_width="match_parent"
+                android:clipToPadding="false"
+                android:paddingLeft="6dp"
+                android:paddingRight="16dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/card_banner_daily" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
